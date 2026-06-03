@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: ##f2ebdc;
+  --foreground: ##020202;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-sinister: "Sinister";
+}
+
+@font-face {
+  font-family: "Sinister";
+  src: url("/fonts/SinistreVF.ttf") format("truetype");
+  font-weight: 100 300 500 800 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+.masked-img {
+  mask-image: url("/logo-black.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 15%;
+  opacity: 0.8;
+}
