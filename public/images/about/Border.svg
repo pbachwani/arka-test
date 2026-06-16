@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 862.5">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 4px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 11px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <line class="cls-2" x1="1298.96" y1="847" x2="1298.96" y2="15.5"/>
+        <line class="cls-1" x1="1312.46" y1="847" x2="1312.46" y2="15.5"/>
+      </g>
+      <g>
+        <line class="cls-2" x1="141.04" y1="847" x2="141.04" y2="15.5"/>
+        <line class="cls-1" x1="127.54" y1="847" x2="127.54" y2="15.5"/>
+      </g>
+      <g>
+        <polyline class="cls-2" points="0 15.5 127.54 15.5 141.04 15.5 1298.96 15.5 1312.46 15.5 1440 15.5"/>
+        <polyline class="cls-1" points="0 2 127.54 2 141.04 2 1298.96 2 1312.46 2 1440 2"/>
+      </g>
+      <g>
+        <polyline class="cls-2" points="0 847 127.54 847 141.04 847 1298.96 847 1312.46 847 1440 847"/>
+        <polyline class="cls-1" points="0 860.5 127.54 860.5 141.04 860.5 1298.96 860.5 1312.46 860.5 1440 860.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

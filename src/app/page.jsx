@@ -1,3 +1,4 @@
+import KYP from "@/components/KYP";
 import HeroReveal from "./HeroReveal";
 import About from "@/components/About";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <main className="w-full h-full mx-auto min-h-screen">
       <HeroReveal />
       <About />
+      <KYP />
       <div className="h-screen w-full flex justify-center items-center bg-red-300">
         Section 3
       </div>

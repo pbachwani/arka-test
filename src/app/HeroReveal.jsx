@@ -142,6 +142,11 @@ const HeroReveal = () => {
     const timeoutId = setTimeout(() => {
       const timeline = gsap.timeline();
 
+      // gsap.set(heroTextRef.current, {
+      //   scale: 0.8,
+      //   opacity: 0,
+      // });
+
       timeline.to(topLayerRef.current, {
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -164,6 +169,7 @@ const HeroReveal = () => {
           },
           opacity: 1,
           ease: "power2.inOut",
+          scale: 1,
         },
         0,
       );
@@ -189,17 +195,21 @@ const HeroReveal = () => {
       className="relative w-full"
     >
       <div className="relative h-[200vh] bg-black">
+        {/* top layer and bg video */}
         <div className="sticky top-0 w-full h-screen overflow-hidden">
-          <img
-            src="/background.png"
+          <video
+            src="/videos/water-bg.mp4"
+            autoPlay
+            loop
+            muted
             alt="Background"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-40"
           />
 
           <div className="absolute inset-0 overflow-hidden">
             <img
               ref={topLayerRef}
-              src="/top-layer.png"
+              src="/top-layer.svg"
               alt="Top Layer"
               className="w-full h-full object-cover origin-center"
             />
@@ -208,33 +218,34 @@ const HeroReveal = () => {
 
         <div
           ref={heroTextRef}
-          className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 opacity-0"
+          className="absolute inset-0 flex items-start justify-center pointer-events-none z-10"
         >
-          <div className="sticky top-1/2 -translate-y-1/2 text-center text-white max-w-3xl px-6">
+          <div className="sticky top-1/2 -translate-y-1/2 text-center text-white max-w-4xl px-6">
             <TextReveal
               scrollTrigger={{
-                trigger: sectionRef.current,
+                // ignore error for now, will be fixed in next commit
+                trigger: sectionRef,
                 start: "top top",
                 end: "center top",
                 scrub: 1,
               }}
-              className="text-4xl font-sinister block mb-4"
+              className="text-3xl md:text-4xl font-sinister block mb-4 font-extrabold"
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
-              non?
+              &quot;स्वस्थस्य स्वास्थ्य रक्षणं, आतुरस्य विकार प्रशमनं च।&quot;
             </TextReveal>
             <TextReveal
               scrollTrigger={{
-                trigger: sectionRef.current,
+                trigger: sectionRef,
                 start: "top top",
                 end: "center top",
                 scrub: 1,
               }}
-              className="text-xl md:text-2xl font-poppins"
+              className="md:text-xl font-poppins text-justify text-center"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              earum, dolores natus atque aperiam totam ullam, eligendi
-              cupiditate nisi quos consequatur placeat autem facere repellat.
+              The objective of Ayurveda is preservation and promotion of the
+              health of a healthy person and restoration of health in the
+              diseased. Good health is the fundamental prerequisite to acquire
+              materialistic, social and spiritual upliftment of human being.
             </TextReveal>
           </div>
         </div>

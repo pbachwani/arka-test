@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import PreloaderWrapper from "@/components/PreloaderWrapper";
+import Navbar from "@/components/Navbar";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -19,7 +20,10 @@ export default function RootLayout({ children }) {
     <html lang="en" className={` ${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <LenisProvider>
-          <PreloaderWrapper>{children}</PreloaderWrapper>
+          <PreloaderWrapper>
+            <Navbar />
+            {children}
+          </PreloaderWrapper>
         </LenisProvider>
       </body>
     </html>
