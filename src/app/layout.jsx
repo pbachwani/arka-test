@@ -21,11 +21,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className={` ${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <LenisProvider>
-          {/* <PreloaderWrapper> */}
-          {/* <GlobalLiquify /> */}
-          <Navbar />
-          {children}
-          {/* </PreloaderWrapper> */}
+          <PreloaderWrapper>
+            {/* <GlobalLiquify /> */}
+            <Navbar />
+            {children}
+          </PreloaderWrapper>
         </LenisProvider>
       </body>
     </html>
