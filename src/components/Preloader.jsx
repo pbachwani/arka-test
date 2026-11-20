@@ -8,7 +8,7 @@ export default function Preloader({ isLoading, setIsLoading, onExit }) {
         <motion.div
           key="preloader"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, scale: 1.2 }}
+          exit={{ opacity: 0, scale: 1.15 }}
           transition={{ duration: 2.3, ease: "easeOut" }}
           onAnimationComplete={() => {
             onExit?.();

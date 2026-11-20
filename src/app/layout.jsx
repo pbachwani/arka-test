@@ -3,6 +3,7 @@ import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import PreloaderWrapper from "@/components/PreloaderWrapper";
 import Navbar from "@/components/Navbar";
+import GlobalLiquify from "@/components/GlobalLiquify";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -20,10 +21,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className={` ${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <LenisProvider>
-          <PreloaderWrapper>
-            <Navbar />
-            {children}
-          </PreloaderWrapper>
+          {/* <PreloaderWrapper> */}
+          {/* <GlobalLiquify /> */}
+          <Navbar />
+          {children}
+          {/* </PreloaderWrapper> */}
         </LenisProvider>
       </body>
     </html>

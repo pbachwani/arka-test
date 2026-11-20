@@ -12,8 +12,8 @@ const GradientBlocks = () => {
       description:
         "Create stunning visual experiences that captivate and engage your audience with beautiful, intuitive interfaces.",
       cta: "Learn More",
-      gradient: "from-[#0E126C] to-[#CE3E26] from-[80%] to-[100%]",
-      color: "bg-[#0E126C]",
+      gradient: "from-[#002554] to-[#C05131] from-[80%] to-[100%]",
+      color: "bg-[#002554]",
     },
     {
       id: 2,
@@ -21,8 +21,8 @@ const GradientBlocks = () => {
       description:
         "Build robust and scalable solutions with cutting-edge technology and best practices for modern web applications.",
       cta: "Learn More",
-      gradient: "from-[#CE3E26] to-[#CE3E26]",
-      color: "bg-[#CE3E26]",
+      gradient: "from-[#C05131] to-[#C05131]",
+      color: "bg-[#C05131]",
     },
     {
       id: 3,
@@ -30,8 +30,8 @@ const GradientBlocks = () => {
       description:
         "Transform your vision into reality with strategic planning and innovative approaches that drive measurable results.",
       cta: "Learn More",
-      gradient: "from-[#CE3E26] to-[#0D4424] from-[10%] to-[30%]",
-      color: "bg-[#0D4424]",
+      gradient: "from-[#C05131] to-[#215732] from-[10%] to-[30%]",
+      color: "bg-[#215732]",
     },
   ];
 
@@ -42,14 +42,15 @@ const GradientBlocks = () => {
   return (
     <div className="w-full h-full flex items-center justify-center p-4">
       {/* Desktop View */}
-      <div className="hidden md:flex w-full max-w-6xl h-96 gap-0 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="hidden md:flex w-full max-w-6xl h-96 gap-2 overflow-hidden">
         {blocks.map((block, index) => (
           <motion.div
             key={block.id}
             layout
             onClick={() => handleBlockClick(index)}
             onHoverStart={() => handleBlockClick(index)}
-            className={`relative bg-linear-to-r ${block.gradient} cursor-pointer overflow-hidden group`}
+            // className={`relative bg-linear-to-r ${block.gradient} cursor-pointer overflow-hidden group`}
+            className={`relative ${block.color} cursor-pointer overflow-hidden group`}
             initial={{ flex: 1 }}
             animate={{
               flex: expandedIndex === index ? 2 : 1,
@@ -66,10 +67,10 @@ const GradientBlocks = () => {
             {/* <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" /> */}
 
             {/* Content */}
-            <div className="relative h-full flex flex-col items-center justify-between p-8 text-white">
+            <div className="relative h-full flex flex-col items-start justify-between p-8 text-white">
               {/* Title - Always visible */}
               <motion.h3
-                className="text-2xl md:text-3xl font-bold"
+                className="text-2xl md:text-3xl font-bold text-left"
                 animate={{ y: expandedIndex === index ? -10 : 0 }}
                 transition={{ duration: 0.3 }}
               >

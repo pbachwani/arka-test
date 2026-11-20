@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className="fixed right-4 top-4 z-50 ">
+    <nav className="fixed right-10 top-8 z-50 ">
       <div
         className="w-14 h-auto will-change-transform cursor-pointer"
         onClick={() => setMenuOpen((prev) => !prev)}

@@ -6,11 +6,11 @@ const About = () => {
   return (
     <section
       id="about-section"
-      className=" w-full flex flex-col bg-background py-10 px-6 relative"
+      className=" w-full flex flex-col bg-background p-4 relative cursor-default"
     >
       {/* text content */}
-      <div className="border-2 w-full h-full p-1 ">
-        <div className="w-full h-full min-h-svh flex flex-col items-center justify-start py-10 z-10 border-4">
+      <div className="border-2 w-full h-full p-1.5">
+        <div className="w-full h-full min-h-svh flex flex-col items-center justify-start py-10 z-10 border-8">
           <ImageMarqueeScroll
             baseVelocity={2}
             height={320}
@@ -23,11 +23,11 @@ const About = () => {
               "/images/about/6.png",
             ]}
           />
-          <div className="w-full h-full flex flex-col flex-1 justify-between items-start gap-4 md:text-xl text-sm text-justify mt-10 px-4">
+          <div className="w-full h-full flex flex-col justify-between items-start gap-4 md:text-xl text-sm text-justify mt-10 px-4 ">
             <h2 className="font-sinister text-3xl">What is Ayurveda?</h2>
 
             {/* text content */}
-            <div className="flex flex-col md:flex-row h-full md:gap-10 gap-4 flex-1">
+            <div className="flex flex-col md:flex-row h-full md:gap-10 gap-4 ">
               <div className="flex flex-col w-full h-full md:w-1/2 gap-4">
                 <p className="w-full">
                   Ayurveda, an indigenous ancient medical science of India, is

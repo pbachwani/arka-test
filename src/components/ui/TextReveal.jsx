@@ -50,7 +50,7 @@ export default function TextReveal({
   const words = children.split(" ");
 
   return (
-    <div ref={containerRef} className={className}>
+    <div ref={containerRef} className={`${className}`}>
       {words.map((word, index) => (
         <span
           key={index}
